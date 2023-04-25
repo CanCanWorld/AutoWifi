@@ -71,7 +71,7 @@ class MainActivity : ComponentActivity() {
                     }
                     Row {
                         Button(onClick = { manualConnectHigh() }) {
-                            Text(text = "手动连接\n安卓10以上")
+                            Text(text = "手动连接")
                         }
                     }
                     if (isAutoing) {
