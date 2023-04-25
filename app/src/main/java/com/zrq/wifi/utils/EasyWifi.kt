@@ -87,6 +87,9 @@ class EasyWifi(
         return -1
     }
 
+    /**
+     * 安卓10及以上连接方式
+     */
     @RequiresApi(Build.VERSION_CODES.Q)
     private fun connectByNew(ssid: String, password: String, callback: (Boolean)->Unit) {
 
@@ -119,6 +122,9 @@ class EasyWifi(
     }
 
 
+    /**
+     * 安卓10以下连接方式
+     */
     private fun connectByOld(scanResult: ScanResult, password: String, callback: (Boolean)->Unit) {
         var isSuccess = false
         val ssid = scanResult.SSID
